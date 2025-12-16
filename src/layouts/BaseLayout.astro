@@ -1,0 +1,75 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'Jasa Unlock IMEI iPhone Terpercaya', description = 'Solusi aman dan legal untuk membuka blokir IMEI iPhone di Indonesia. Garansi dan proses cepat.' } = Astro.props;
+---
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b2545" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="antialiased text-slate-800 bg-white">
+    <header class="bg-gradient-to-b from-primary to-transparent">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-md bg-white/10 flex items-center justify-center text-white font-semibold">IMEI</div>
+          <div class="text-white">
+            <div class="font-semibold">Jasa Unlock IMEI</div>
+            <div class="text-sm opacity-90">iPhone — Aman & Legal</div>
+          </div>
+        </a>
+
+        <nav class="hidden sm:flex gap-6 items-center text-white">
+          <a href="#" class="hover:underline">Beranda</a>
+          <a href="#cara-kerja" class="hover:underline">Cara Kerja</a>
+          <a href="#keunggulan" class="hover:underline">Mengapa Kami</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
+          <a href="#kontak" class="px-3 py-2 bg-emerald-500 text-white rounded-md">Hubungi</a>
+        </nav>
+
+        <div class="sm:hidden">
+          <a href="#kontak" class="px-3 py-2 bg-emerald-500 text-white rounded-md">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+      <slot />
+    </main>
+
+    <footer class="border-t mt-12">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 grid gap-6 sm:grid-cols-3">
+        <div>
+          <div class="font-semibold text-slate-900">Jasa Unlock IMEI</div>
+          <div class="text-sm text-slate-600 mt-2">Solusi aman, legal, dan transparan untuk iPhone terblokir IMEI di Indonesia.</div>
+        </div>
+        <div>
+          <div class="font-medium text-slate-800">Layanan</div>
+          <ul class="mt-2 text-sm text-slate-600 space-y-1">
+            <li>Unlock IMEI Permanen</li>
+            <li>Verifikasi Legalitas</li>
+            <li>Garansi & Support</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-medium text-slate-800">Kontak</div>
+          <div class="mt-2 text-sm text-slate-600">WhatsApp: <a href="https://wa.me/6281234567890" class="text-emerald-600">+62 812-3456-7890</a></div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 text-xs text-slate-500">
+          Disclaimer: Kami memberikan layanan untuk membuka blokir IMEI sesuai peraturan yang berlaku. Layanan tidak melanggar hukum dan dilakukan dengan proses yang aman. Untuk kasus spesifik, tim kami akan menjelaskan syarat dan langkah sebelum transaksi.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
